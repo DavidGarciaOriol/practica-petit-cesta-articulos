@@ -1,5 +1,5 @@
 import string
-from articulo import Articulo
+from modelo.articulo import Articulo
 
 class Cesta:
 
@@ -59,7 +59,7 @@ class Cesta:
             self.factura_final[articulo.nombre] = precios_finales[index]
             index = index+1
 
-    def __str__(self):
+    def obtener_factura(self):
         str = ""
         str+="- - - Tu Cesta - - - \n\n"
 
@@ -68,4 +68,8 @@ class Cesta:
 
         str+=f"\nTOTAL: {self.calcular_total()} €"
         str+="\nIVA y Descuentos ya aplicados."    
+        return str
+        
+    def __str__(self):
+        str = self.obtener_factura()
         return str

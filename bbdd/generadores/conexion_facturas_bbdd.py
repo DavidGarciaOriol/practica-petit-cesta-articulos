@@ -52,8 +52,9 @@ def generar_tabla_usuarios_facturas_bbdd():
 
     conexion_facturas_bbdd.close()
 
+
+# # # GENERAR TABLAS # # #
+
 #generar_tabla_usuarios_bbdd()
 #generar_tabla_facturas_bbdd()
 #generar_tabla_usuarios_facturas_bbdd()
-    
-

@@ -1,5 +1,4 @@
 import sqlite3
-import uuid
 
 def introducir_usuarios_bbdd(id_usuario, nombre_usuario):
 
@@ -16,6 +15,4 @@ def introducir_usuarios_bbdd(id_usuario, nombre_usuario):
 
 # # # TEST PURPOSE # # #
 
-random_uuid = uuid.uuid4()
-
-# introducir_usuarios_bbdd(random_uuid,"Paco")
+#introducir_usuarios_bbdd(11112222,"Paco")
