@@ -38,6 +38,7 @@ def generar_tabla_usuarios_facturas_bbdd():
     cursor = conexion_facturas_bbdd.cursor()
 
     cursor.execute('''
+        CREATE TABLE USUARIOS_FACTURAS(
         ID_USUARIO INTEGER,
         NOMBRE_USUARIO VARCHAR(128),
         NOMBRE_FACTURA VARCHAR(128),
@@ -46,12 +47,13 @@ def generar_tabla_usuarios_facturas_bbdd():
         FOREIGN KEY(NOMBRE_USUARIO) REFERENCES USUARIOS(NOMBRE_USUARIO),
         FOREIGN KEY(NOMBRE_FACTURA) REFERENCES FACTURAS(NOMBRE_FACTURA),
         FOREIGN KEY(CONTENIDO_FACTURA) REFERENCES FACTURAS(CONTENIDO_FACTURA)
+        )
     ''')
 
     conexion_facturas_bbdd.close()
 
-# generar_tabla_usuarios_bbdd()
-# generar_tabla_facturas_bbdd()
-# generar_tabla_usuarios_facturas_bbdd()
+generar_tabla_usuarios_bbdd()
+generar_tabla_facturas_bbdd()
+generar_tabla_usuarios_facturas_bbdd()
     
 
